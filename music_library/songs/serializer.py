@@ -1,11 +1,11 @@
 from rest_framework import serializers
-from music.models import Song
+from songs.models import Song
 
 
 class SongSerializer(serializers.Serializer):
     title = serializers.CharField(required=True, allow_blank = False)
     artist = serializers.CharField(required=True, allow_blank = False)
-    album = serializers.CharField(required=True,allow_bank=False)
+    album = serializers.CharField(required=True,allow_blank=False)
     release_date = serializers.DateField()
     genre = serializers.CharField(required=True,allow_blank=False)
 
