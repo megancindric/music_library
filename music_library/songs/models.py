@@ -8,3 +8,6 @@ class Song(models.Model):
     album = models.CharField(max_length = 20)
     release_date = models.DateField()
     genre = models.CharField(max_length = 20)
+
+    def __str__(self):
+        return self.title
